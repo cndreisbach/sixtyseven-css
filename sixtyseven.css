@@ -11,12 +11,23 @@
 }
 
 * {
-  line-height: var(--line-height);
   box-sizing: border-box;
+  line-height: var(--line-height);
+  margin-top: 0;
 }
 
 html {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family:
+    /* Safari for OS X and iOS (San Francisco) */
+    -apple-system,
+    /* Chrome < 56 for OS X (San Francisco) */
+    BlinkMacSystemFont,
+    /* Windows */
+    "Segoe UI",
+    /* Android */
+    "Roboto",
+    /* Basic web fallback */
+    "Helvetica Neue", Arial, sans-serif;
   font-size: var(--base-font-size);
 }
 
@@ -29,7 +40,7 @@ body {
 
 /* Text styles */
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6, p, ul, ol, dl {
   margin-bottom: var(--leading);
 }
 
