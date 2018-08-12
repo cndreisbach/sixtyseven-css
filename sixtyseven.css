@@ -1,9 +1,16 @@
 :root {
+  --blue: hsl(211, 65%, 50%);
+  --green: hsl(96, 70%, 50%);
+  --black: hsl(220, 100%, 1%);
+  --yellow: hsl(59, 100%, 60%);
+  --red: hsl(1, 100%, 59%);
+  --purple: hsl(300, 100%, 25%);
+
   --bg-color: white;
-  --text-color: black;
-  --border-color: black;
-  --link-color: blue;
-  --visited-link-color: purple;
+  --text-color: var(--black);
+  --border-color: var(--black);
+  --link-color: var(--blue);
+  --visited-link-color: var(--purple);
 
   --base-font-size: 16px;
   --line-height: 1.5;
@@ -103,4 +110,17 @@ label > input {
   margin-left: 1rem;
   flex-grow: 1;
   margin-bottom: 1rem;
+}
+
+/* Buttons */
+
+button, input[type=submit] {
+  font-size: 1rem;
+  padding: 0.5rem;
+  /* border: 1px solid var(--black); */
+}
+
+input[type=submit] {
+  width: auto;
+  margin-bottom: 0;
 }
