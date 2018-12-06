@@ -60,9 +60,34 @@ dl {
   margin-bottom: var(--leading);
 }
 
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.25rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 1.25rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
 h1>small {
   display: block;
   opacity: 0.6;
+  font-size: 1.5rem;
 }
 
 a {
@@ -127,7 +152,7 @@ label>textarea {
   width: auto;
   margin-left: 1rem;
   flex-grow: 1;
-  margin-bottom: 1rem;
+  margin-bottom: var(--leading);
 }
 
 /* Buttons */
@@ -181,6 +206,34 @@ input[type=submit] {
   margin-bottom: 0;
 }
 
-/* Lists - TODO */
+/* Lists */
+
+ul,
+ol {
+  padding-left: var(--leading);
+}
+
+li>ul,
+li>ol {
+  margin-bottom: 0;
+}
+
+ol>li ol>li {
+  list-style-type: lower-alpha;
+}
+
+ol>li ol>li ol>li {
+  list-style-type: lower-roman;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dd {
+  margin-left: 0;
+  margin-bottom: var(--leading);
+}
+
 
 /* Semantic text elements - aside, article, etc - TODO */
