@@ -46,9 +46,21 @@
           <input type="text" id="name" name="name">
         </div>
         <div>
-            <label for="city">City</label>
-            <input type="text" id="city" name="city">
-          </div>
+          <label for="city">City</label>
+          <input type="text" id="city" name="city">
+        </div>
+        <div>
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option>Canada</option>
+            <option>India</option>
+            <option>Spain</option>
+          </select>        
+        </div>
+        <div>
+          <label for="notes">Notes</label>
+          <textarea id="notes" rows="5"></textarea>
+        </div>
       </fieldset>
 
       <fieldset>
@@ -63,6 +75,22 @@
           <input type="email" id="email" name="email">
         </label>
 
+        <div>
+          <label for="contact">Preferred contact
+            <select id="contact" name="contact">
+              <option>Email</option>
+              <option>Phone</option>
+              <option>None</option>
+            </select>        
+          </label>
+        </div>
+
+        <div>
+          <label for="address">Address
+          <textarea id="address" rows="5"></textarea>
+        </label>
+        </div>
+
       </fieldset>
     </form>
   </section>
@@ -74,6 +102,9 @@
     </p>
     <p>
       <input type="submit" value="An input with type submit">
+    </p>
+    <p>
+      <button type="reset">A button with type reset</button>
     </p>
   </section>
 
