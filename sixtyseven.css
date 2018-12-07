@@ -1,17 +1,22 @@
 :root {
   --dark-blue: #00449E;
   --blue: #357EDD;
+  --light-blue: #96CCFF;
+  --lightest-blue: #CDECFF;
   --washed-blue: #F6FFFE;
   --green: #19A974;
   --black: #000000;
   --near-black: #111111;
   --white: #FFFFFF;
   --near-white: #FDFDFD;
+  --light-gray: #EEEEEE;
+  --silver: #999999;
   --yellow: #FFD700;
+  --highlighter-yellow: #FFFF00;
+  --washed-yellow: #FFFCEB;
   --dark-red: #E7040F;
   --red: #FF4136;
   --purple: #5E2CA5;
-  --highlighter-yellow: #FFFF00;
 
   --bg-color: var(--near-white);
   --text-color: var(--near-black);
@@ -22,8 +27,16 @@
   --base-font-size: 16px;
   --line-height: 1.5;
   --leading: calc(var(--base-font-size) * var(--line-height));
-  --sans-serif-font-stack: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Arial, sans-serif;
-  --serif-font-stack: Cambria, Times, "Times New Roman", serif;
+  --sans-serif-font-stack: -apple-system, BlinkMacSystemFont,
+    'avenir next', avenir,
+    'helvetica neue', helvetica,
+    ubuntu,
+    roboto, noto,
+    'segoe ui', arial,
+    sans-serif;
+  --serif-font-stack: georgia,
+    times,
+    serif;
   --monospace-font-stack: Consolas, Monaco, monospace;
 }
 
@@ -252,3 +265,32 @@ dd {
 }
 
 /* Semantic text elements - aside, article, etc - TODO */
+
+section {
+  border: 3px solid var(--light-gray);
+  padding: var(--leading) 1rem;
+  margin: var(--leading) 0;
+}
+
+section+section {
+  margin-top: calc(var(--leading) * 2);
+}
+
+article {
+  font-family: var(--serif-font-stack);
+}
+
+article h1,
+article h2,
+article h3,
+article h4,
+article h5,
+article h6 {
+  font-family: var(--sans-serif-font-stack);
+}
+
+aside {
+  padding: var(--leading) 1rem;
+  background-color: var(--washed-blue);
+  border: 1px solid var(--light-blue);
+}
