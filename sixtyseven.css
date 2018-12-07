@@ -1,20 +1,30 @@
 :root {
-  --blue: hsl(211, 65%, 50%);
-  --green: hsl(96, 70%, 50%);
-  --black: hsl(220, 100%, 1%);
-  --yellow: hsl(59, 100%, 60%);
-  --red: hsl(1, 100%, 59%);
-  --purple: hsl(300, 100%, 25%);
+  --dark-blue: #00449E;
+  --blue: #357EDD;
+  --washed-blue: #F6FFFE;
+  --green: #19A974;
+  --black: #000000;
+  --near-black: #111111;
+  --white: #FFFFFF;
+  --near-white: #FDFDFD;
+  --yellow: #FFD700;
+  --dark-red: #E7040F;
+  --red: #FF4136;
+  --purple: #5E2CA5;
+  --highlighter-yellow: #FFFF00;
 
-  --bg-color: white;
-  --text-color: var(--black);
-  --border-color: var(--black);
-  --link-color: var(--blue);
+  --bg-color: var(--near-white);
+  --text-color: var(--near-black);
+  --border-color: var(--near-black);
+  --link-color: var(--dark-blue);
   --visited-link-color: var(--purple);
 
   --base-font-size: 16px;
   --line-height: 1.5;
   --leading: calc(var(--base-font-size) * var(--line-height));
+  --sans-serif-font-stack: -apple-system, BlinkMacSystemFont, "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --serif-font-stack: Cambria, Times, "Times New Roman", serif;
+  --monospace-font-stack: Consolas, Monaco, monospace;
 }
 
 * {
@@ -24,17 +34,7 @@
 }
 
 html {
-  font-family:
-    /* Safari for OS X and iOS (San Francisco) */
-    -apple-system,
-    /* Chrome < 56 for OS X (San Francisco) */
-    BlinkMacSystemFont,
-    /* Windows */
-    "Segoe UI",
-    /* Android */
-    "Roboto",
-    /* Basic web fallback */
-    "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--sans-serif-font-stack);
   font-size: var(--base-font-size);
 }
 
@@ -90,6 +90,8 @@ h1>small {
   font-size: 1.5rem;
 }
 
+/* Inline text elements - b, i, em, strong, mark */
+
 a {
   text-underline-position: under;
   color: var(--link-color);
@@ -97,6 +99,20 @@ a {
 
 a:visited {
   color: var(--visited-link-color);
+}
+
+code,
+samp {
+  font-family: var(--monospace-font-stack);
+}
+
+strong {
+  font-weight: bold;
+  color: var(--dark-red);
+}
+
+mark {
+  background-color: var(--highlighter-yellow);
 }
 
 
@@ -234,6 +250,5 @@ dd {
   margin-left: 0;
   margin-bottom: var(--leading);
 }
-
 
 /* Semantic text elements - aside, article, etc - TODO */
